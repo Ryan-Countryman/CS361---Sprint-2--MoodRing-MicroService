@@ -1,0 +1,91 @@
+### C361 - MicroService HTTP Request TESTS By: Ryan Countryman
+
+### Request 1: POST Request Happy Song text
+
+POST http://localhost:3000/mood HTTP/1.1
+content-type: text/plain
+
+Happy
+
+
+###Request 2: POST Request Sad Song via text
+POST http://localhost:3000/mood HTTP/1.1
+content-type: text/plain
+
+Sad
+
+###Request 3: POST Request Angry Song via text
+POST http://localhost:3000/mood HTTP/1.1
+content-type: text/plain
+
+Angry
+
+###Request 4: POST Request via text with non-existent mood || Expected 'No Songs Found with mood: Excited'
+POST http://localhost:3000/mood HTTP/1.1
+content-type: text/plain
+
+Excited
+
+###Request 5: POST Request via text with improper entry
+POST http://localhost:3000/mood HTTP/1.1
+content-type: text/plain
+
+aNgRy
+
+###Request 6: POST Request Happy Song via JSON
+POST http://localhost:3000/mood HTTP/1.1
+content-type: application/json
+
+{
+    "mood": "Happy"
+}
+
+###Request 7: POST Request Sad Song via JSON
+POST http://localhost:3000/mood HTTP/1.1
+content-type: application/json
+
+{
+    "mood": "Sad"
+}
+
+###Request 8: POST Request Angry Song via JSON
+POST http://localhost:3000/mood HTTP/1.1
+content-type: application/json
+
+{
+    "mood": "Angry"
+}
+
+###Request 9: POST Request via JSON with non-existent mood || Expected 'No Songs Found with mood: Excited'
+POST http://localhost:3000/mood HTTP/1.1
+content-type: application/json
+
+{
+    "mood": "Excited"
+}
+
+###Request 10: POST Request via JSON with improper entry
+POST http://localhost:3000/mood HTTP/1.1
+content-type: application/json
+
+{
+    "mood": "aNgRy"
+}
+
+###Request 11: GET Request Happy Song
+GET http://localhost:3000/mood/Happy HTTP/1.1
+
+
+###Request 12: GET Request Sad Song
+GET http://localhost:3000/mood/Sad HTTP/1.1
+
+
+###Request 13: GET Request Angry Song
+GET http://localhost:3000/mood/Angry HTTP/1.1
+
+###Request 14: GET Request with non-existent mood || Expected 'No Songs Found with mood: Excited'
+GET http://localhost:3000/mood/Excited HTTP/1.1
+
+
+###Request 15: GET Request Angry Song
+GET http://localhost:3000/mood/aNgRy HTTP/1.1
