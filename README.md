@@ -12,10 +12,13 @@ a. How to make a request:
 
   POST Request:
     Originally we had discussed allowing retrieval via POST request, so there are two methods requesting via POST:
+    
       text/plain: To make a POST request of content type text/plain submit the request to the path /mood Ex: http://localhost:3000/mood
                   The format for the plain text request body is solely the mood that is requested. Ex: Sad
+                  
       application/json: To make a POST request of content type application/json submit the request body to the path /mood Ex: http://localhost:3000/mood
                   The format for the json request body is {"mood" : *insert mood*}  Ex. {"mood" : "Angry"}
+                  
     Either form of request will be handled and then utilized in the same method as the GET request shown above
 
 
