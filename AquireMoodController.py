@@ -10,7 +10,7 @@ from AquireMoodTools import provideSong
 
 app = Flask(__name__)
 
-@app.route("/mood/<string:mood>" , methods=['GET','POST'])
+@app.route("/mood/<string:mood>" , methods=['GET'])
 def microMain(mood):
     mood.lower() #Lower full string to maintain consistency of request
     selectedSong = provideSong(mood.capitalize()) #Invoke database operation to select random song with matching criteria
